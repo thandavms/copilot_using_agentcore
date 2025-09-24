@@ -1,0 +1,30 @@
+default_agent: adp_copilot_agent
+agents:
+  adp_copilot_agent:
+    name: adp_copilot_agent
+    entrypoint: /Users/thandavm/work/strat-accounts/hpi/strands/adp_copilot/agentcore_deployment/agentcore_runtime.py
+    platform: linux/arm64
+    container_runtime: docker
+    aws:
+      execution_role: arn:aws:iam::924155096146:role/AmazonBedrockAgentCoreSDKRuntime-us-east-1-f0c74ce097
+      execution_role_auto_create: false
+      account: '924155096146'
+      region: us-east-1
+      ecr_repository: 924155096146.dkr.ecr.us-east-1.amazonaws.com/bedrock-agentcore-adp_copilot_agent
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: adp_copilot_agent-ey3rBD8Vnm
+      agent_arn: arn:aws:bedrock-agentcore:us-east-1:924155096146:runtime/adp_copilot_agent-ey3rBD8Vnm
+      agent_session_id: 31440121-14c6-4e3f-897d-a612070875eb
+    codebuild:
+      project_name: bedrock-agentcore-adp_copilot_agent-builder
+      execution_role: arn:aws:iam::924155096146:role/AmazonBedrockAgentCoreSDKCodeBuild-us-east-1-f0c74ce097
+      source_bucket: bedrock-agentcore-codebuild-sources-924155096146-us-east-1
+    authorizer_configuration: null
+    oauth_configuration: null
