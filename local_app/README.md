@@ -2,6 +2,8 @@
 
 A lightweight Streamlit frontend for the Copilot AI agent with persistent memory and knowledge base access.
 
+![alt text](image.png)
+
 ## Features
 
 - 🤖 AI Assistant with persistent memory
