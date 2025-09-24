@@ -2,6 +2,8 @@
 
 A Streamlit-based chat application that integrates with AWS Bedrock AgentCore Runtime to provide AI-powered conversational capabilities with persistent memory, knowledge base search, and web search functionality.
 
+![alt text](image.png)
+
 ## Features
 
 - **Interactive Chat Interface**: Clean Streamlit web interface for conversations
